@@ -1,4 +1,4 @@
-class Fragment:
+class Fraction:
     def __init__(self, top, bottom):
         self.num = top
         self.den = bottom
@@ -7,5 +7,7 @@ class Fragment:
         # print the fraction in the form a/b
         return "{}/{}".format(self.num, self.den)
 
-    def __add__(self, other_fraction: Fragment):
-        new_num = self.num*other_fraction.den
+    def __add__(self, other_fraction):
+        new_num = self.num * other_fraction.den + self.den * other_fraction.num
+        new_den = self.den * other_fraction.den
+        return Fraction(new_num, new_den)
