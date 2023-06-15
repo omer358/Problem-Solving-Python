@@ -5,6 +5,7 @@ from fraction import Fraction
 
 
 if __name__ == '__main__':
-    fragment1 = Fraction(1, 4)
+    fragment1 = Fraction(1, 2)
     fragment2 = Fraction(1, 2)
     print(fragment1.__add__(fragment2))
+    print(fragment1 == fragment2)
