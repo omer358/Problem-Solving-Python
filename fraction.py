@@ -1,3 +1,4 @@
+# gcd function
 def gcd(m, n):
     while m % n != 0:
         old_m = m
@@ -8,6 +9,9 @@ def gcd(m, n):
     return n
 
 
+# Fraction class
+# Implements: addition and equality
+# ToDo: multiplication, division, subtraction and comparison operators (< , >)
 class Fraction:
     def __init__(self, top, bottom):
         self.num = top
