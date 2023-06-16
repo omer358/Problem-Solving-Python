@@ -31,3 +31,9 @@ class Fraction:
         first_num = self.num * other.den
         second_num = other.num * self.den
         return first_num == second_num
+
+    def __mul__(self, other):
+        new_num = self.num * other.num
+        new_den = self.den * other.den
+        common = gcd(new_num, new_den)
+        return Fraction(new_num // common, new_den // common)
