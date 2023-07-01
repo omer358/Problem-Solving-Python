@@ -1,12 +1,13 @@
-
 # Press the green button in the gutter to run the script.
 
-from fraction import Fraction
+def sum_of_n(n):
+    the_sum = 0
+    for i in range(1, n + 1):
+        the_sum = i + the_sum
+    return the_sum
 
 
 if __name__ == '__main__':
-    fragment1 = Fraction(1, 2)
-    fragment2 = Fraction(1, 2)
-    print(fragment1.__add__(fragment2))
-    print(fragment1.__mul__(fragment2))
-    print(fragment1 == fragment2)
+    print(sum_of_n(5))
+
+
