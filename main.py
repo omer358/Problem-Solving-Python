@@ -22,3 +22,4 @@ def sum_of_n2(n):
 
 if __name__ == '__main__':
     print(anagram_solution1('abcd', 'dcba'))
+    print(anagram_solution2('abcd', 'dcba'))
