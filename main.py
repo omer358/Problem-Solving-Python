@@ -1,6 +1,8 @@
 # Press the green button in the gutter to run the script.
 import time
 
+from anagram_detection import *
+
 
 def sum_of_n(n):
     start = time.time()
@@ -15,9 +17,8 @@ def sum_of_n2(n):
     stat = time.time()
     the_sum = (n * (n + 1)) / 2
     end = time.time()
-    return the_sum, end -stat
+    return the_sum, end - stat
 
-    
+
 if __name__ == '__main__':
-    for i in range(5):
-        print("Sum is %d required %10.7f seconds" % sum_of_n2(10000))
+    print(anagram_solution1('abcd', 'dcba'))
