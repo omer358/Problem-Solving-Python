@@ -1,6 +1,8 @@
 # Press the green button in the gutter to run the script.
 import time
+import timeit
 
+from timeit import Timer
 from anagram_detection import *
 
 
@@ -21,6 +23,11 @@ def sum_of_n2(n):
 
 
 if __name__ == '__main__':
-    print(anagram_solution1('abcd', 'dcba'))
-    print(anagram_solution2('abcd', 'dcba'))
-    print(anagram_solution3('abcd', 'dcba'))
+    t1 = Timer("test1()", "from performance_data_structure.lists_performance import test1")
+    print("Concat", t1.timeit(number=100), "milliseconds")
+    t2 = Timer("test2()", "from performance_data_structure.lists_performance import test2")
+    print("append", t2.timeit(number=100), "milliseconds")
+    t3 = Timer("test3()", "from performance_data_structure.lists_performance import test3")
+    print("comprehension", t3.timeit(number=100), "milliseconds")
+    t4 = Timer("test4()", "from performance_data_structure.lists_performance import test4")
+    print("List range", t4.timeit(number=100), "milliseconds")
