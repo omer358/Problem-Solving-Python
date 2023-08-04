@@ -8,8 +8,8 @@ class Stack:
         print("{} has been added to the stack".format(item))
 
     def pop(self):
-        print("An item has been poped from the stack")
-        return self.items.pop()
+        popped_item = self.items.pop()
+        print("{} has been poped from the stack".format(popped_item))
 
     def peek(self):
         return "{} is the top element on the stack".format(self.items[len(self.items) - 1])
