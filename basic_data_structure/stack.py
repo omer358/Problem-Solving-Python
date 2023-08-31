@@ -15,7 +15,7 @@ class Stack:
         return "{} is the top element on the stack".format(self.items[len(self.items) - 1])
 
     def is_empty(self):
-        print("Stack Status:", end=" ")
+        print("Stack emptiness:", self.items == [])
         return self.items == []
 
     def size(self):
