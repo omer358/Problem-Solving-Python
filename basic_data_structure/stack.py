@@ -10,6 +10,7 @@ class Stack:
     def pop(self):
         popped_item = self.items.pop()
         print("{} has been poped from the stack".format(popped_item))
+        return popped_item
 
     def peek(self):
         return "{} is the top element on the stack".format(self.items[len(self.items) - 1])
