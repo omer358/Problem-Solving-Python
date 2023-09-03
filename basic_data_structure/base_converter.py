@@ -1,20 +1,23 @@
 from basic_data_structure.stack import Stack
 
+"""Takes a decimal number and any base between 2 and 16 as parameters"""
 
-def divide_by_2(dec_number):
+
+def base_converter(dec_number, base):
+    digits = "0123456789ABCDEF"
     rem_stack = Stack()
 
     while dec_number > 0:
-        rem = dec_number % 2
+        rem = dec_number % base
         rem_stack.push(rem)
-        dec_number = dec_number // 2
+        dec_number = dec_number // base
 
-    bin_number = ""
+    new_string = ""
     while not rem_stack.is_empty():
-        bin_number = bin_number + str(rem_stack.pop())
+        new_string = new_string + digits[rem_stack.pop()]
 
-    return bin_number
+    return new_string
 
 
 if __name__ == "__main__":
-    print(divide_by_2(233))
+    print(base_converter(233, 16))
