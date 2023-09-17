@@ -1,4 +1,4 @@
-from basic_data_structure.stack import Stack
+from basic_data_structure.stack.stack import Stack
 
 
 def par_checker(symbol_string):

@@ -1,4 +1,4 @@
-from basic_data_structure.stack import Stack
+from basic_data_structure.stack.stack import Stack
 
 """Takes a decimal number and any base between 2 and 16 as parameters"""
 

@@ -1,4 +1,4 @@
-from basic_data_structure.queue import Queue
+from basic_data_structure.queue.queue import Queue
 
 
 def hot_potato(name_list, num):
