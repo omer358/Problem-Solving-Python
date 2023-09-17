@@ -18,4 +18,4 @@ class Deque:
         return self.items.pop(0)
 
     def size(self):
-        return self.items.pop(0)
+        return len(self.items)
