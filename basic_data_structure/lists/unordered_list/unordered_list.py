@@ -33,6 +33,22 @@ class UnorderedList:
 
         return found
 
+    def remove(self, item):
+        current = self.head
+        previous = None
+        found = False
+        while not found:
+            if current.get_data() == item:
+                found = True
+            else:
+                previous = current
+                current = current.get_next()
+
+        if previous is None:
+            self.head = current.get_next()
+        else:
+            previous.set_next(current.get_next())
+
 
 if __name__ == "__main__":
     myList = UnorderedList()
@@ -43,4 +59,6 @@ if __name__ == "__main__":
     myList.add(26)
     myList.add(54)
     print(myList.size())
+    print(myList.search(17))
+    myList.remove(17)
     print(myList.search(17))
