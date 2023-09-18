@@ -21,3 +21,26 @@ class UnorderedList:
             current = current.get_next()
 
         return count
+
+    def search(self, item):
+        current = self.head
+        found = False
+        while current is not None and not found:
+            if current.get_data() == item:
+                found = True
+            else:
+                current = current.get_next()
+
+        return found
+
+
+if __name__ == "__main__":
+    myList = UnorderedList()
+    myList.add(31)
+    myList.add(77)
+    myList.add(17)
+    myList.add(93)
+    myList.add(26)
+    myList.add(54)
+    print(myList.size())
+    print(myList.search(17))
