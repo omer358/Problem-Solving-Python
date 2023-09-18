@@ -49,6 +49,13 @@ class UnorderedList:
         else:
             previous.set_next(current.get_next())
 
+    def append(self, item):
+        temp = Node(item)
+        current = self.head
+        while current.get_next() is not None:
+            current = current.get_next()
+        current.set_next(temp)
+
 
 if __name__ == "__main__":
     myList = UnorderedList()
@@ -59,6 +66,8 @@ if __name__ == "__main__":
     myList.add(26)
     myList.add(54)
     print(myList.size())
+    myList.append(0)
+    print(myList.size())
     print(myList.search(17))
     myList.remove(17)
-    print(myList.search(17))
+    print(myList.search(0))
