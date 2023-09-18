@@ -12,3 +12,12 @@ class UnorderedList:
         temp = Node(item)
         temp.set_next(self.head)
         self.head = temp
+
+    def size(self):
+        current = self.head
+        count = 0
+        while current is not None:
+            count = count + 1
+            current = current.get_next()
+
+        return count
