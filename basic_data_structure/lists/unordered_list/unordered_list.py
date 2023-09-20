@@ -4,6 +4,7 @@ from node import Node
 class UnorderedList:
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def is_empty(self):
         return self.head is None
@@ -11,6 +12,9 @@ class UnorderedList:
     def add(self, item):
         temp = Node(item)
         temp.set_next(self.head)
+        if self.head is None:
+            print("{} is the first item in the linked list".format(temp.get_data()))
+            self.tail = temp
         self.head = temp
 
     def size(self):
@@ -51,10 +55,8 @@ class UnorderedList:
 
     def append(self, item):
         temp = Node(item)
-        current = self.head
-        while current.get_next() is not None:
-            current = current.get_next()
-        current.set_next(temp)
+        temp.set_next(self.tail)
+        self.head = temp
 
 
 if __name__ == "__main__":
